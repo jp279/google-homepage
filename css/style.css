@@ -8,15 +8,17 @@
 
 body {
   position: relative;
+  min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden; /* Disable scrolling on page */
 }
 
-a {
+/* a {
   text-decoration: none;
-  padding: 0.75rem;
+  padding: 0.25rem;
   font-size: 0.875rem;
   color: #343434;
-}
+} */
 
 a:hover {
   text-decoration: underline;
@@ -24,34 +26,168 @@ a:hover {
 
 #header {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 1rem;
+  align-items: center; /* Centers links */
   justify-content: space-between;
+}
+
+#header * a {
+  text-decoration: none;
+  padding: 0.25rem;
+  font-size: 0.875rem;
+  color: #343434;
 }
 
 #footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: #f2f2f2;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+}
+
+#footer * a {
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #343434;
 }
 
 .btn {
-  font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-  padding: 0.5rem 1.5rem;
+  /*font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;*/
+  /*padding: 0.5rem 1rem;*/
   border-radius: 4px;
-  cursor: pointer;
+  /*cursor: pointer;*/
+  border: transparent;
+  margin: 0.25rem;
 }
+
+/* .btn:hover { */
+  /* cursor: pointer; */
+  /* margin: 0.175rem; */
+  /* border: 1px solid #dadce0; */
+  /* box-shadow: 0 1px 1px rgba(0,0,0,.1); Stops shifting */
+/* } */
 
 .btn-signin {
   color: #fff;
   background: #1a73e8;
   font-weight: 500;
+  padding: 0.575rem 1.75rem;
 }
 
+.btn-form {
+  background-color: #f8f9fa;
+  padding: 0.5rem 1.5rem;
+  /*margin: 0.5rem 0.25rem;*/
+}
+
+/* Not needed right now since this is for the app button that
+   has been commented out. 
 .app-hover:hover {
   background: rgba(95,99,104,0.24);
   padding: 0.5rem;
   border-radius: 50%;
   cursor: pointer;
+} */
+
+.btn-form:hover {
+  cursor: pointer;
+  margin: 0.175rem; /* Add margin around button */
+  /*border-color: 1px solid #f8f9fa; This produces an error */
+  border: 1px solid #dadce0;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1); /* Stops shifting */
+}
+
+/* Center the logo */
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Center the form */
+.form {
+  text-align: center;
+}
+
+/* Style the text field */
+ /* .input {
+  margin: 1.5rem;
+  padding: 0.75rem;
+  border-radius: 25px;
+  border: 1px solid #dfe1e5;
+  outline: none;  // Remove border on click (Chrome)
+  width: 36.25rem;
+} */
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem auto;
+  padding: 0.75rem;
+  border-radius: 25px;
+  border: 1px solid #dfe1e5;
+  width: 36.25rem;
+}
+
+.input-container:hover {
+  cursor: text;
+  border: 1px solid #dadce0;
+  /* box-shadow: 0 2px 2px rgba(0,0,0,.1); */
+  box-shadow: rgba(61, 41, 41, 0.15) 1px 1px 6px;
+}
+
+.input {
+  width: 35rem;
+  line-height: 1.5;
+  border: 0;
+  outline: none;
+}
+
+.container {
+  padding: 1rem;
+  background-color: #f2f2f2;
+}
+
+.container-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-content > div > a {
+  color: #70757a;
+}
+
+/* .leaf-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-leaf {
+  width: 14px;
+  height: 14px;
+}
+
+.leaf-text {
+  padding: 0;
+} */
+
+/* .search-icon {
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 35px;
+  width: 19px;
+  height: 19px;
+  top: 11.875rem;
+  left: 20.625rem;
+} */
+
+.search-icon {
+  margin-right: 0.75rem;
+  width: 19.5px;
+  height: 19.5px;
 }
