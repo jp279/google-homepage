@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 * {
   box-sizing: border-box;
@@ -63,10 +63,10 @@ a:hover {
 }
 
 /* .btn:hover { */
-  /* cursor: pointer; */
-  /* margin: 0.175rem; */
-  /* border: 1px solid #dadce0; */
-  /* box-shadow: 0 1px 1px rgba(0,0,0,.1); Stops shifting */
+/* cursor: pointer; */
+/* margin: 0.175rem; */
+/* border: 1px solid #dadce0; */
+/* box-shadow: 0 1px 1px rgba(0,0,0,.1); Stops shifting */
 /* } */
 
 .btn-signin {
@@ -78,12 +78,12 @@ a:hover {
 
 .btn-signin:hover {
   cursor: pointer;
-  opacity: 0.95;
+  opacity: 0.95; /* Make button appear lighter on hover */
 }
 
 .btn-form {
   background-color: #f8f9fa;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.2rem;
   /*margin: 0.5rem 0.25rem;*/
 }
 
@@ -101,7 +101,7 @@ a:hover {
   margin: 0.175rem; /* Add margin around button */
   /*border-color: 1px solid #f8f9fa; This produces an error */
   border: 1px solid #dadce0;
-  box-shadow: 0 1px 1px rgba(0,0,0,.1); /* Stops shifting */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Stops shifting */
 }
 
 /* Center the logo */
@@ -116,7 +116,7 @@ a:hover {
 }
 
 /* Style the text field */
- /* .input {
+/* .input {
   margin: 1.5rem;
   padding: 0.75rem;
   border-radius: 25px;
@@ -193,7 +193,7 @@ a:hover {
 
 .search-icon {
   margin-right: 0.75rem;
-  opacity: 0.4;
+  opacity: 0.4; /* Make icon opaque */
   width: 19.5px;
   height: 19.5px;
 }
