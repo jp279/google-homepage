@@ -1,3 +1,12 @@
+/* 
+  TODO List:
+  - Add back the app button on the header
+  - Add back the carbon leaf icon and text on the footer
+  - Fix the media query for the footer to display property on
+    iPhone 6/7/8 and iPhone 6/7/8 Plus
+  - Remove bold text on the buttons in Firefox
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 * {
@@ -73,7 +82,8 @@ a:hover {
   color: #fff;
   background: #1a73e8;
   font-weight: 500;
-  padding: 0.575rem 1.75rem;
+  /* padding: 0.575rem 1.75rem; */
+  padding: 0.575rem 1.5rem;
 }
 
 .btn-signin:hover {
@@ -196,4 +206,45 @@ a:hover {
   opacity: 0.4; /* Make icon opaque */
   width: 19.5px;
   height: 19.5px;
+}
+
+@media (max-width: 667px) {
+  #header {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 1rem;
+    align-items: center; /* Centers links */
+    justify-content: center;
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem auto;
+    padding: 0.75rem;
+    border-radius: 25px;
+    border: 1px solid #dfe1e5;
+    width: 20rem;
+  }
+
+  /* 
+  Future: Figure out how to change the footer to make it display all six links in two rows.
+  */
+  .container-content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 667px) {
+  #header {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 1rem;
+    align-items: center; /* Centers links */
+    justify-content: space-between;
+  }
 }
